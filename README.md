@@ -1,8 +1,8 @@
-## [Git Hub 사용방법](./Git/contents)  
+## [Git Hub 사용방법](./Git)  
 개인적인 사용방법  
   
 
-## [Spring_Boot 개념](./Spring_Boot_개념/contents) 
+## [Spring_Boot 개념](./Spring_Boot_개념) 
   
 스프링부트 개념정리 with JPA
 
