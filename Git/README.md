@@ -14,5 +14,6 @@
 - [Git Remote URL 확인](./contents/9.md)
 
 ## error resolve
-- [error - Another git process...](./contents/10.md)
+- [error - Another git process...](./contents/10.md)  
+
 - [error - Your local changes ...](./contents/11.md)
