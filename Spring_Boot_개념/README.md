@@ -36,3 +36,5 @@
 
 ### Etc
 - [추가 기본 개념](https://data-make.tistory.com/574)
+
+- [그리고](https://github.com/j2ong/Spring_Boot_Blog/issues)
