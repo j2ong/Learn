@@ -1,5 +1,4 @@
-
-![으앙](https://user-images.githubusercontent.com/68761119/153320093-3be9f3dd-7c4b-4613-9156-f089172148fb.jpg)
+![ㅌㅌㅌ](https://user-images.githubusercontent.com/68761119/153342798-7aaa8b9d-edde-4f0a-b2ce-e3c05ef6ce0f.png)
 
 ```
 const express = require('express');
@@ -30,10 +29,12 @@ var fs = require('fs');
 var 이름 = fs.readFileSync('in.txt', 'utf-8');
 var id = fs.readFileSync('out.txt','utf-8');
 var sta = fs.readFileSync('station.txt','utf-8');
+var url = fs.readFileSync('url.txt','utf-8');
 	
 const 이름a = 이름.split('\n'); 
 const ida = id.split('\n');                                     //문자열에 /r이 남아있다.
 const staa = sta.split('\n');
+const urla = url.split('\n');	
 	
 var dicObject = {}
 for( var i=0; i<이름a.length; i++){
@@ -44,15 +45,21 @@ var dicObject1 = {}
 for( var i=0; i<ida.length; i++){
     dicObject1[ida[i]] = staa[i];
 }
+	
+var dicObject2 = {}
+for( var i=0; i<ida.length; i++){
+    dicObject2[이름a[i]] = urla[i];
+}
 
 //var line = "상무역 2번 출구";
 require('moment-timezone');
 const url1 = 'http://api.gwangju.go.kr/xml/arriveInfo';
-const key = "응 비밀이야."; //제공받은 Key 값
+const key = "wow"; //제공받은 Key 값
 const stationId = dicObject[msg]; // 정류장 ID
 const all_url = url1 + '?serviceKey=' + key +  '&BUSSTOP_ID=' + stationId;	
 	
 var title = dicObject1[stationId];	
+var returnurl = dicObject2[msg];
 	
 request(all_url, function (err, res, body) {
 var bn = [];
@@ -93,7 +100,7 @@ function rr() {
          				 "title": `${title}`,
           				 "description": `${str}`,
           				 "thumbnail": {
-            				"imageUrl": "https://user-images.githubusercontent.com/68761119/153319955-8d0d8f15-4ea6-497a-8a83-06e68aafab1c.png"
+            				"imageUrl": `${returnurl}`
          		 }
                 }
 				}
@@ -111,5 +118,6 @@ function rrr() {
 app.listen(3000, function () {
 console.log('Port 3000에서 돌아간다.');
 });
+
 
 ```

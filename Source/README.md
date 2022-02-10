@@ -12,6 +12,8 @@
 
 - [node.js 파일 읽기](./contents/JavaScript/node_파일읽기.md)
 
+- [지하철 출구기반 정류장 매핑 후 버스시간](./contents/JavaScript/Station_Exit_Bus_ChatBot_ver.md)
+
 ## Python
 
 - [XML파싱_파이썬](./contents/Python/XML_Parsing_Python.md)
