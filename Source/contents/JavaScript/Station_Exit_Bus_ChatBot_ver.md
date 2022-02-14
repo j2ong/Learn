@@ -54,11 +54,11 @@ for( var i=0; i<ida.length; i++){
 //var line = "상무역 2번 출구";
 require('moment-timezone');
 const url1 = 'http://api.gwangju.go.kr/xml/arriveInfo';
-const key = "wow"; //제공받은 Key 값
+const key = ""; //제공받은 Key 값
 const stationId = dicObject[msg]; // 정류장 ID
 const all_url = url1 + '?serviceKey=' + key +  '&BUSSTOP_ID=' + stationId;	
 	
-var title = dicObject1[stationId];	
+var title = dicObject1[stationId];
 var returnurl = dicObject2[msg];
 	
 request(all_url, function (err, res, body) {
@@ -91,6 +91,9 @@ $('ARRIVE').each(function(idx){
 							// promise, async, await 대신
 });
 function rr() {
+	if(title == undefined){
+		title = "정류장 정보가 없습니다.";
+	}
     responseBody = {
         'version': "2.0",
         template: { //카드형식
@@ -118,6 +121,5 @@ function rrr() {
 app.listen(3000, function () {
 console.log('Port 3000에서 돌아간다.');
 });
-
 
 ```
